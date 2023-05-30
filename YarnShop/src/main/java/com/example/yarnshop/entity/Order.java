@@ -1,11 +1,13 @@
 package com.example.yarnshop.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
+@Data
 public class Order {
     @Id
     @GeneratedValue
@@ -17,11 +19,5 @@ public class Order {
 
     private LocalDateTime orderDate;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
-    public Long getId() {
-        return id;
-    }
 }
